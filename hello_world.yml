@@ -1,0 +1,10 @@
+---
+- name: Hello World!
+  hosts: all
+  tasks:
+  - name: Hello World!
+    shell: echo "Hi from {{ ansible_hostname }}"
+  - set_artifact:
+      data:
+        some_key: some_value
+        hostname: "{{ ansible_hostname }}"
